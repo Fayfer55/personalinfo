@@ -59,10 +59,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func forgotLoginButton() {
-        showAlert(with: "Oh, thats a pitty", and: "Your User Name is - \(UserInfo.getUserName())")
+        showAlert(with: "Oh, thats a pitty",
+                  and: "Your User Name is - \(UserInfo.getUserName())")
     }
     @IBAction func forgotPasswordButton() {
-        showAlert(with: "Oh, thats a pitty", and: "Your Password is - \(UserInfo.getPassword())" )
+        showAlert(with: "Oh, thats a pitty",
+                  and: "Your Password is - \(UserInfo.getPassword())" )
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -79,7 +81,9 @@ extension ViewController {
     private func showAlert (with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Okay", style: .default)
+        
         alert.addAction(okAction)
+        
         present(alert, animated: true)
     }
 }
