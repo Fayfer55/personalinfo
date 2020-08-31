@@ -13,6 +13,8 @@
 		85260FBC24F93F2900DAACDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85260FBA24F93F2900DAACDF /* Main.storyboard */; };
 		85260FBE24F93F2E00DAACDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85260FBD24F93F2E00DAACDF /* Assets.xcassets */; };
 		85260FC124F93F2E00DAACDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85260FBF24F93F2E00DAACDF /* LaunchScreen.storyboard */; };
+		85260FCD24F9613500DAACDF /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85260FCC24F9613500DAACDF /* userModel.swift */; };
+		85A145C824F96A25007A2D47 /* FirstTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A145C724F96A25007A2D47 /* FirstTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		85260FBD24F93F2E00DAACDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85260FC024F93F2E00DAACDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85260FC224F93F2E00DAACDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85260FCC24F9613500DAACDF /* userModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
+		85A145C724F96A25007A2D47 /* FirstTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		85260FB324F93F2900DAACDF /* personalinfo */ = {
 			isa = PBXGroup;
 			children = (
-				85260FB424F93F2900DAACDF /* AppDelegate.swift */,
-				85260FB624F93F2900DAACDF /* SceneDelegate.swift */,
-				85260FB824F93F2900DAACDF /* ViewController.swift */,
-				85260FBA24F93F2900DAACDF /* Main.storyboard */,
-				85260FBD24F93F2E00DAACDF /* Assets.xcassets */,
-				85260FBF24F93F2E00DAACDF /* LaunchScreen.storyboard */,
-				85260FC224F93F2E00DAACDF /* Info.plist */,
+				85260FCE24F9615100DAACDF /* models */,
+				85260FCB24F9400100DAACDF /* viewControllers */,
+				85260FC924F93FD500DAACDF /* storyboard */,
+				85260FC824F93F6900DAACDF /* supportingFiles */,
+				85260FCA24F93FEC00DAACDF /* Sources */,
 			);
 			path = personalinfo;
+			sourceTree = "<group>";
+		};
+		85260FC824F93F6900DAACDF /* supportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				85260FB424F93F2900DAACDF /* AppDelegate.swift */,
+				85260FB624F93F2900DAACDF /* SceneDelegate.swift */,
+				85260FC224F93F2E00DAACDF /* Info.plist */,
+			);
+			path = supportingFiles;
+			sourceTree = "<group>";
+		};
+		85260FC924F93FD500DAACDF /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				85260FBA24F93F2900DAACDF /* Main.storyboard */,
+				85260FBF24F93F2E00DAACDF /* LaunchScreen.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
+		85260FCA24F93FEC00DAACDF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				85260FBD24F93F2E00DAACDF /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		85260FCB24F9400100DAACDF /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				85260FB824F93F2900DAACDF /* ViewController.swift */,
+				85A145C724F96A25007A2D47 /* FirstTabBarViewController.swift */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		85260FCE24F9615100DAACDF /* models */ = {
+			isa = PBXGroup;
+			children = (
+				85260FCC24F9613500DAACDF /* userModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +186,8 @@
 			files = (
 				85260FB924F93F2900DAACDF /* ViewController.swift in Sources */,
 				85260FB524F93F2900DAACDF /* AppDelegate.swift in Sources */,
+				85260FCD24F9613500DAACDF /* userModel.swift in Sources */,
+				85A145C824F96A25007A2D47 /* FirstTabBarViewController.swift in Sources */,
 				85260FB724F93F2900DAACDF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F5MV2U5PR;
-				INFOPLIST_FILE = personalinfo/Info.plist;
+				INFOPLIST_FILE = personalinfo/supportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.mycompany.personalinfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F5MV2U5PR;
-				INFOPLIST_FILE = personalinfo/Info.plist;
+				INFOPLIST_FILE = personalinfo/supportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.mycompany.personalinfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
