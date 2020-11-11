@@ -18,8 +18,4 @@ class FirstTabBarViewController: UIViewController {
         
         welcomeLabel.text = welcome 
     }
-    
-    @IBAction func logOutAction() {
-        dismiss(animated: true)
-    }
 }

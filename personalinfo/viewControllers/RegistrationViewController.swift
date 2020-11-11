@@ -8,14 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class RegistrationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    @IBOutlet var logInButton: UIButton!
-    
-    var userField: String!
-    var passwordField: String!
+    private let userInfo = UserInfo.getUserInfo()
     
     override func viewDidLoad() {
         super .viewDidLoad()
@@ -48,7 +45,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        if userName == UserInfo.getUserName() && password == UserInfo.getPassword() {
+        if userName == userInfo.userName && password == userInfo.password {
             performSegue(withIdentifier: "tabBarSegue", sender: nil)
         } else {
             showAlert(with: "Invalid Login or Password",
@@ -60,16 +57,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func forgotLoginButton() {
         showAlert(with: "Oh, thats a pitty",
-                  and: "Your User Name is - \(UserInfo.getUserName())")
+                  and: "Your User Name is - \(userInfo.userName)")
     }
     @IBAction func forgotPasswordButton() {
         showAlert(with: "Oh, thats a pitty",
-                  and: "Your Password is - \(UserInfo.getPassword())" )
+                  and: "Your Password is - \(userInfo.password)" )
+    }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        userNameTextField.text = ""
+        passwordTextField.text = ""
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
-            nextField.becomeFirstResponder()
+        if textField == userNameTextField {
+            textField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
         } else {
             goIntoTabBarController()
         }
@@ -77,7 +80,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-extension ViewController {
+extension RegistrationViewController {
     private func showAlert (with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Okay", style: .default)

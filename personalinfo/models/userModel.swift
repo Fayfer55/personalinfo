@@ -12,11 +12,8 @@ struct UserInfo {
 }
 
 extension UserInfo {
-    static func getUserName() -> String {
-        "admin"
-    }
-    
-    static func getPassword() -> String {
-        "admin"
+    static func getUserInfo() -> UserInfo {
+        UserInfo(userName: "admin", password: "admin")
+        
     }
 }

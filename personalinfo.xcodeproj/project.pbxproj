@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		85260FB524F93F2900DAACDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85260FB424F93F2900DAACDF /* AppDelegate.swift */; };
 		85260FB724F93F2900DAACDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85260FB624F93F2900DAACDF /* SceneDelegate.swift */; };
-		85260FB924F93F2900DAACDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85260FB824F93F2900DAACDF /* ViewController.swift */; };
+		85260FB924F93F2900DAACDF /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85260FB824F93F2900DAACDF /* RegistrationViewController.swift */; };
 		85260FBC24F93F2900DAACDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85260FBA24F93F2900DAACDF /* Main.storyboard */; };
 		85260FBE24F93F2E00DAACDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85260FBD24F93F2E00DAACDF /* Assets.xcassets */; };
 		85260FC124F93F2E00DAACDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85260FBF24F93F2E00DAACDF /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		85260FB124F93F2900DAACDF /* personalinfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = personalinfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85260FB424F93F2900DAACDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85260FB624F93F2900DAACDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85260FB824F93F2900DAACDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85260FB824F93F2900DAACDF /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		85260FBB24F93F2900DAACDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85260FBD24F93F2E00DAACDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85260FC024F93F2E00DAACDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		85260FCB24F9400100DAACDF /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				85260FB824F93F2900DAACDF /* ViewController.swift */,
+				85260FB824F93F2900DAACDF /* RegistrationViewController.swift */,
 				85A145C724F96A25007A2D47 /* FirstTabBarViewController.swift */,
 			);
 			path = viewControllers;
@@ -140,7 +140,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Кирилл Файфер";
 				TargetAttributes = {
 					85260FB024F93F2900DAACDF = {
@@ -184,7 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85260FB924F93F2900DAACDF /* ViewController.swift in Sources */,
+				85260FB924F93F2900DAACDF /* RegistrationViewController.swift in Sources */,
 				85260FB524F93F2900DAACDF /* AppDelegate.swift in Sources */,
 				85260FCD24F9613500DAACDF /* userModel.swift in Sources */,
 				85A145C824F96A25007A2D47 /* FirstTabBarViewController.swift in Sources */,
@@ -240,6 +240,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -300,6 +301,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
